@@ -1,0 +1,159 @@
+/* // IMPORTANT */
+.nav {
+	position: sticky;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	top: 0;
+}
+
+.subnav {
+	position: sticky;
+	bottom: 0;
+	top: 60px; 
+    /* // prevent covering main nav */
+}
+
+/* // DEMO LAYOUT CODE */
+.nav {
+	background: #42A5F5;
+}
+
+.nav__title {
+    background: #42A5F5;
+    margin: 0px 30px;
+}
+
+.nav__item {
+    background: #42A5F5;	
+    display: inline-block;
+	margin: 0px 10px;
+}
+
+.arefnavmenu{
+    color: black;
+    text-decoration: none;
+}
+
+.hero {
+	display: grid;
+	justify-content: center;
+	/* align-items: center; */
+	min-height: 100vh;
+	background: #BBDEFB;
+	
+}
+
+.h1centrado {
+    font-size: 6em;
+    margin: 0 90px;
+    text-align: center;
+}
+
+.h1centrado_no_titulo {
+    font-size: 3em;
+    margin: 0 10px;
+    text-align: center;
+}
+
+#parrafoexplicativo{
+    text-align:left;
+    font-size:large;
+    margin-block-end: -0.8em;
+    /* text-indent: 5px;     */
+}
+
+#imagen_home_logo_camion{
+    width: 232px;
+}
+
+#camioncito_item{
+    width: 15px;
+}
+
+.subnav {
+	background: #fff;
+	border-bottom: 1px solid #222;
+
+}
+
+.subnav__container {
+    background: #fff;
+    align-items: baseline;
+    display: flex;
+    margin: 0 60px;
+    padding: 15px 0;
+}
+
+.subnav__title {
+    background: #fff;
+    font-size: 1.25em;
+}
+.subnav__list {
+    background: #fff;
+    margin: 0 15px;
+}
+.subnav__item {
+    background: #fff;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 5px;
+}
+
+.section {
+	max-width: 900px;
+	margin: 60px auto;
+	padding: 90px 30px;
+	background-color: #FFCDD2;
+	text-align: center;
+
+}
+
+.section_como_funciona {
+	max-width: 900px;
+	margin: 60px auto;
+	padding: 90px 30px;
+	background-color: lemonchiffon;
+	text-align: center;
+
+}
+
+.section_eres_transportista {
+	max-width: 900px;
+	margin: 60px auto;
+	padding: 90px 30px;
+	background-color: #FFCDD2;
+	text-align: center;
+
+}
+
+.section_resenias {
+	max-width: 900px;
+	margin: 60px auto;
+	padding: 30px 30px;
+	background-color: rgb(178, 226, 178);
+	text-align: center;
+
+}
+
+#titulo_resenia{
+    text-align: left;
+    text-decoration: underline;
+}
+
+.h2section {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.psection {
+    line-height: 1.625em;
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+footer {
+	text-align: center;
+    background: #42A5F5;
+}
