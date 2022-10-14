@@ -380,7 +380,7 @@ footer {
 
 .contenedor-formulario{
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: none;
     padding: 20px;
     width: 50%;
     /* display: flex; */
@@ -434,7 +434,7 @@ footer {
 }
 
 #body-formulario{
-    background-image: url("../img/mudanza.jpg");
+    background-image: url("/img/mudanza.jpg");
     background-size: cover;
     background-position-x: center;
     position: relative;
@@ -561,6 +561,74 @@ input[type=submit]:hover{
     display: inline-block;
 }
 /* Fin de Show Data */
+
+/* Nuevos CSS para el cuadrito de la
+ temperatura */
+
+ .weather-box {
+    /* position: fixed; */
+    display:block ;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    min-width: 100px; 
+    max-width: 100px; 
+    top: 0;
+    background: #42A5F5;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 9;
+}
+.tituloProvincia{
+    margin-top: 4px;
+    text-align: center;
+    margin-bottom: -7px;
+    font-size: small;
+    /* font-size:1.1vw; */
+}
+#iconoTemperatura{
+    text-align: center;
+    /* estos de abajo son para hacerlo responsive */
+    width: 100%;
+    height: auto;
+}
+.parrafoEstadoClima {
+    margin-top: -8px;
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: small;
+}
+.parrafoTemperatura{
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: small;
+    visibility: hidden;
+}
+.littleParrafo{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: xx-small;
+    visibility: hidden;
+}
+#tablitaTemperatura{
+    margin: 0 auto;
+    margin-left: 5px;
+    border: none;
+}
+
+.thtemp{
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Fin nuevos css para cuadrito temperatura */
+
 
 /* Comienza CSS con Breakpoints para hacer
  resposive por dispositivos */
@@ -765,6 +833,24 @@ input[type=submit]:hover{
         margin: 0 0;
     }
 
+    /* Agrego nuevos */
+    .weather-box {
+        min-width: 60px; 
+        max-width: 60px; 
+    }
+    .tituloProvincia {
+        margin-bottom: -13px;
+    }
+    #iconoTemperatura {
+        width: 100%;
+    }
+    #tablitaTemperatura {
+        margin-left: -13px;
+    }
+    .parrafoEstadoClima {
+        margin-top: -5px;
+    }
+    /* fin nuevos */
 }
 
 /* Small devices (400px and down) */
@@ -806,8 +892,37 @@ input[type=submit]:hover{
         top: 180px;
     }
 
+    /* Agrego nuevos para ocultar*/
+    .weather-box {
+        min-width: 0px; 
+        max-width: 0px;
+        visibility: hidden;
+    }
+    .tituloProvincia {
+        margin-bottom: -13px;
+        visibility: hidden;
+
+    }
+    #iconoTemperatura {
+        width: 0%;
+        visibility: hidden;
+    }
+    #tablitaTemperatura {
+        /* margin-left: -13px; */
+        visibility: hidden;
+    }
+    .parrafoEstadoClima {
+        /* margin-top: -5px; */
+        visibility: hidden;
+    }
+    #iconoTemperatura{
+        visibility: hidden;
+    }
+    /* fin nuevos */
+
 }
 
 
 /* Fin CSS con Breakpoints para hacer
  resposive por dispositivos */
+
