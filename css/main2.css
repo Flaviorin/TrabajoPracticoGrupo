@@ -434,7 +434,7 @@ footer {
 }
 
 #body-formulario{
-    background-image: url("./img/mudanza.jpg");
+    background-image: url("/img/mudanza.jpg");
     background-size: cover;
     background-position-x: center;
     position: relative;
