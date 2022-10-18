@@ -33,53 +33,51 @@ var hed=`
 
 document.getElementById("idheader").innerHTML=hed;
 
-function obtenerPais(callback) {
-	var request = new XMLHttpRequest();
-		request.onreadystatechange = function() {
-		if (request.readyState === 4 && request.status === 200) {
-			var json = JSON.parse(request.responseText);
-			//console.log('Your country is ' + json['location']['country']['name']);
-			var latitud = json['location']['latitude'];
-			//console.log(latitud);
-			var longitud = json['location']['longitude'];
-			//console.log(longitud);
-			var coordenadas = [latitud,longitud];
-			//console.log(coordenadas);
-			//provincia = json['location']['country']['capital'];
-			callback(coordenadas);
-			//return (coordenadas);
-		}
-	};
-	request.open('GET', 'https://api.ipregistry.co/?key=o4ie2fwo690290mu', true);
-	request.send(null);
+async function obtenerPais(callback) {
+	const apiURL = "https://api.ipregistry.co/?key=o4ie2fwo690290mu"
+	try {
+		const response = await fetch(apiURL)
+		const data = await response.json()
+		//console.log('Your country is ' + data['location']['country']['name']);
+		var latitud = data['location']['latitude'];
+		//console.log(latitud);
+		var longitud = data['location']['longitude'];
+		//console.log(longitud);
+		var coordenadas = [latitud,longitud];
+		//console.log(coordenadas);
+		//provincia = data['location']['country']['capital'];
+		callback(coordenadas);
+		//return (coordenadas);
+	}
+	catch {
+		console.log('Ocurrió un error grave en el servicio obtenerPais',error);
+	}
 }
 
-
-function obtenerClima(coordenadas) {
+async function obtenerClima(coordenadas) {
 	//setTimeout(function() {
-	var city = document.getElementById("muestraProvincia2");
 	var latitud = (coordenadas[0]);
 	var longitud = (coordenadas[1]);
-	var ico = document.getElementById("iconoTemperatura");
-	var estadoClima = document.getElementById("muestraEstadoClima");
-	var xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function () {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			var json2 = JSON.parse(xhttp.responseText);
-			//console.log('La temperatura de ' +json2['name']+' es '+ json2['main']['temp']+'°');
-			//console.log('y esta '+ json2['weather'][0]['description']);
-			city.innerHTML = (json2['name']); //+' (Temp: ' + Math.floor(json2['main']['temp'])+'°)');
-			estadoClima.innerHTML = (Math.floor(json2['main']['temp'])+'°');//('('+ json2['weather'][0]['description'] +')');
-			var iconcode = json2['weather'][0]['icon'];
-			var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-			ico.src = (iconurl);
-		}
-	};
 	var url = new URL('https://api.openweathermap.org/data/2.5/weather?lat=1&lon=1&units=metric&lang=es&appid=b044f07656da438fa995eabf7380b67b');
 	url.searchParams.set('lat', latitud);
 	url.searchParams.set('lon', longitud);
-	xhttp.open('GET',url , true);
-	xhttp.send(null);
+	var city = document.getElementById("muestraProvincia2");
+	var ico = document.getElementById("iconoTemperatura");
+	var estadoClima = document.getElementById("muestraEstadoClima");
+	try {
+		const response2 = await fetch(url)
+		const data2 = await response2.json()
+		//console.log('La temperatura de ' +data2['name']+' es '+ data2['main']['temp']+'°');
+		//console.log('y esta '+ data2['weather'][0]['description']);
+		city.innerHTML = (data2['name']); //+' (Temp: ' + Math.floor(data2['main']['temp'])+'°)');
+		estadoClima.innerHTML = (Math.floor(data2['main']['temp'])+'°');//('('+ data2['weather'][0]['description'] +')');
+		var iconcode = data2['weather'][0]['icon'];
+		var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+		ico.src = (iconurl);
+	}
+	catch {
+		console.log('Ocurrió un error grave en el servicio obtenerClima',error);
+	}
 	// }, 2000);
 }
 //obtenerPais(obtenerClima);
