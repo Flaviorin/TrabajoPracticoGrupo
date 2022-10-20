@@ -398,6 +398,8 @@ footer {
 .titulo-formulario{
     font-size: 1.6em;
     margin-bottom: 0%;
+    background-color: #42A5F5;
+    border-radius: 12px;
 }
 
 .flex-container-1{
@@ -417,14 +419,19 @@ footer {
 }
 
 .guide-text-terminos {
-    color: red;
+    color: white;
     font-size: 0.76em;
     text-align: center;
     margin-top: 1px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    background-color: #174ce5;
+    border-radius: 12px;
+    font-weight: bolder;
 }
 
 .guide-text-terminos-link{
-    color: red;
+    color: white;
     /* font-size: 0.76rem; */
     margin-top: 0px;
 }
