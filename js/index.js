@@ -21,9 +21,9 @@ var hed=`
 	<div class="nav_list_menu">
 		<ul>
 			<li class="nav_item"><a href="#" class="nav_item_stilo">Ver Categorías</a></li>
-			<li class="nav_item"><a href="#eres_transportista_home" class="nav_item_stilo">¿Eres transportista?</a></li>
+			<li class="nav_item"><a href="./index.html#eres_transportista_home" class="nav_item_stilo">¿Eres transportista?</a></li>
 			<li class="nav_item"><a href="#" class="nav_item_stilo">Buscar envíos</a></li>
-			<li class="nav_item"><a href="#como_funciona_home" class="nav_item_stilo">¿Cómo funciona?</a></li>
+			<li class="nav_item"><a href="./index.html#como_funciona_home" class="nav_item_stilo">¿Cómo funciona?</a></li>
 			<li class="nav_item"><a href="#" class="nav_item_stilo">Ayuda</a></li>
 			<li class="nav_item"><a href="#" class="nav_item_stilo">Iniciar sesión</a></li>
 		</ul>
