@@ -412,10 +412,12 @@ footer {
 }
 
 .guide-text {
-    color: red;
+    color: white;
     font-size: 0.76em;
     margin-top: -5px;
     text-align: center;
+    background-color: #42A5F5;
+    border-radius: 12px;
 }
 
 .guide-text-terminos {
