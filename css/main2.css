@@ -133,7 +133,7 @@ body{
 .seccion_como_funciona {
 	max-width: auto;
 	padding: 90px 30px;
-	background-color: #0f4c8b;
+	background-color: #6da4dd;
 	text-align: center;
     color: white;
     /* width: 96.1%; antes del cambio 17-09 */
@@ -262,7 +262,7 @@ body{
 .seccion_eres_transportista {
 	max-width: auto;
 	padding: 195px 30px;
-	background-color: #cc95f0;
+	background-color: #638cc9;
 	text-align: center;
     color: black;
     width: 96.1%;
